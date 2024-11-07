@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivinha Imagens</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url(images/Fundo3.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: repeat;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .title {
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgb(255, 0, 0);
+      background: none;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .p1 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 740px;
+      padding: 20px;
+      margin: 20px;
+      background: none;
+    }
+
+    .btn-custom {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 10px auto;
+      padding: 10px 25px;
+      background-color: rgb(238, 46, 152);
+      border: none;
+      border-radius: 10px;
+      transition: 0.5s;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .btn-custom:hover {
+      padding: 15px 30px;
+      background-color: rgba(251, 139, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .p1 {
+        font-size: 1.2rem;
+      }
+
+      .btn-custom {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger text-white">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/LogoPrincipal.png" alt="Logo Principal" width="200" height="57">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="imagens.html">Adivinha Imagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="numeros.html">Adivinha Números</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tibet.html">Tibet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="participantes.html">Participantes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h1 class="title">Adivinha Imagens</h1>
+  <p class="p1">Escolha a imagem, a memorize, marque se ela aparece nas cartas e irei adivinhar!</p>
+  
+  <div class="container-images">
+    <img src="images/JogoImagens/ImagemPrincipal.png" alt="Imagem Principal" title="Role a tela para baixo">
+    
+    
+    <form name="formAdivinha" method="get" class="card">
+      <div class="form-group">
+        <img src="images/JogoImagens/Carta1.png" alt="Carta 1">
+        <input type="radio" name="op1" value="Sim">Sim
+        <input type="radio" name="op1" value="Não" checked>Não
+      </div>
+      <div class="form-group">
+        <img src="images/JogoImagens/Carta2.png" alt="Carta 2">
+        <input type="radio" name="op2" value="Sim">Sim
+        <input type="radio" name="op2" value="Não" checked>Não
+      </div>
+      <div class="form-group">
+        <img src="images/JogoImagens/Carta3.png" alt="Carta 3">
+        <input type="radio" name="op3" value="Sim">Sim
+        <input type="radio" name="op3" value="Não" checked>Não
+      </div>
+      <div class="form-group">
+        <img src="images/JogoImagens/Carta4.png" alt="Carta 4">
+        <input type="radio" name="op4" value="Sim">Sim
+        <input type="radio" name="op4" value="Não" checked>Não
+      </div>
+      <button type="button" class="btn-custom" onclick="respostas()">Ver o Resultado</button>
+      <button type="reset" class="btn-custom">Limpar Respostas</button>
+    </form>
+
+    <!-- Div onde o resultado será exibido -->
+    <div id="resultado"></div>
+  </div>
+
+  <div id="resultado"></div>
+
+<script>
+  function respostas() {
+    const form = document.forms["formAdivinha"];
+    const resposta1 = form["op1"].value === "Sim" ? 1 : 0;
+    const resposta2 = form["op2"].value === "Sim" ? 2 : 0;
+    const resposta3 = form["op3"].value === "Sim" ? 8 : 0;
+    const resposta4 = form["op4"].value === "Sim" ? 4 : 0;
+
+    const posicao = resposta1 + resposta2 + resposta3 + resposta4;
+
+    const resultadoDiv = document.getElementById("resultado");
+    resultadoDiv.innerHTML = '';
+
+    if (posicao > 0) {
+      resultadoDiv.innerHTML = `<h2>A imagem que você pensou foi:</h2>
+                                <img src="images/JogoImagens/${posicao}.jpg" width="250px" height="300px"> <br><br>
+                                <img src="images/JogoImagens/Genio.png" width="380" height="300">
+                                <button class="btn-custom" onclick="location.reload()">Tentar Novamente</button>`;
+    } else {
+      alert('Você não escolheu nenhuma carta');
+    }
+  }
+</script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

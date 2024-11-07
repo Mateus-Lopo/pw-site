@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        background-image: url(images/fundo2.PNG);
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        height: 100vh;
+        margin: 0;  
+            
+    }
+    .title
+    {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        font-size: 50px;
+        text-shadow: 2px 2px 4px rgb(0, 217, 255);
+        background-color: rgb(0, 4, 243);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+    li{
+      color: rgb(0, 0, 0);
+      
+    }
+    label{
+      color: rgb(0, 0, 0);
+      
+    }
+    ::-webkit-scrollbar{
+      width: 15px;
+      background-color: #0f1a2f;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: blue;
+      border-radius: 30px;
+    }
+    input{
+      background-color: rgb(83, 53, 255);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px 15px;
+      transition: 0.5s;
+    }
+    input:hover{
+      padding: 15px 30px;
+      background-color: rgb(111, 111, 255);
+    }
+    
+
+  </style>
+</head>
+<body>
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger text-white">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/LogoPrincipal.png" alt="" width="200" height="57">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="imagens.html">Adivinha imagens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="numeros.html">Adivinha números</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tibet.html">Tibet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="participantes.html">Participantes</a>
+      </li>
+      </ul>
+      
+      
+    </div>
+  </nav>
+    
+    <h1 class="title">O Grande Quiz</h1>
+
+    <script language="Javascript"> 
+
+      var pergunta=[];//indica  que é uma variáve array  -  vetor
+               pergunta[0] = "Qual o nome do protagonista da série 'The Flash' ?";
+               pergunta[1] = "Em que ano a novela Carrossel do SBT foi gravada ?";
+               pergunta[2] = "Quantas temporadas tema série The Office ?";
+               pergunta[3] = "Qual o nome do melhor amigo do Pernalonga ?";
+               pergunta[4] = "Qual o nome do último episódio do seriado Chaves ?";
+               pergunta[5] = "Qual atriz interpreta a personagem Ana Francisca na novala Chocolate com Pimenta ?";
+               pergunta[6] = "Qual a edição de Malhação lançada em 2019 ?";
+               pergunta[7] = "Quando foi lançado o último episódio de Avenida Brasil ?";
+               pergunta[8] = "Quem é o principal vilão da primeira temporada de 'Demolidor' ?";
+               pergunta[9] = "Qual é o nome da dimensão alternativa que aparece na série Stranger Things?";
+               pergunta[10] = "Em que ano foi lançado o primeiro episódio da WebSérie 'Em Busca da Casa Automática' ?";
+               
+               document.write('<form name="formQuizz" method="get"> ');	
+               
+               
+                               document.write( '<ol>');
+               document.write('<li>'+pergunta[0] +'</li>');
+               
+                                         
+                              
+               document.write('<input type="radio" id="flash" name="r0" value="Berry Allen">');
+               document.write('<label for="flash">Berry Allen</label><br>');
+    document.write('<input type="radio" id="bruce" name="r0" value="Bruce Wayne">');
+    document.write('<label for="bruce">Bruce Wayne</label><br>');
+    document.write('<input type="radio" id="peter" name="r0" value="Peter Parker">');
+    document.write('<label for="peter">Peter Parker</label><br>');
+    document.write('<input type="radio" id="clark" name="r0" value="Clark Kent">');
+    document.write('<label for="clark">Clark Kent</label><br>');
+               
+    document.write('<li>' + pergunta[1] + '</li>');
+document.write('<input type="radio" id="2007" name="r1" value="2007">');
+document.write('<label for="2007">2007</label><br>');
+document.write('<input type="radio" id="1990" name="r1" value="1990">');
+document.write('<label for="1990">1990</label><br>');
+document.write('<input type="radio" id="2013" name="r1" value="2013">');
+document.write('<label for="2013">2013</label><br>');
+document.write('<input type="radio" id="2012" name="r1" value="2012">');
+document.write('<label for="2012">2012</label><br>');
+               
+                 
+    document.write('<li>' + pergunta[2] + '</li>');
+document.write('<input type="radio" id="t2" name="r2" value="2">');
+document.write('<label for="t2">2</label><br>');
+document.write('<input type="radio" id="t10" name="r2" value="10">');
+document.write('<label for="t10">10</label><br>');
+document.write('<input type="radio" id="t9" name="r2" value="9">');
+document.write('<label for="t9">9</label><br>');
+document.write('<input type="radio" id="t7" name="r2" value="7">');
+document.write('<label for="t7">7</label><br>');
+               
+document.write('<li>' + pergunta[3] + '</li>');
+document.write('<input type="radio" id="piupiu" name="r3" value="Piu Piu">');
+document.write('<label for="piupiu">Piu Piu</label><br>');
+document.write('<input type="radio" id="patolino" name="r3" value="Patolino">');
+document.write('<label for="patolino">Patolino</label><br>');
+document.write('<input type="radio" id="frajola" name="r3" value="Frajola">');
+document.write('<label for="frajola">Frajola</label><br>');
+document.write('<input type="radio" id="bosko" name="r3" value="Bosko">');
+document.write('<label for="bosko">Bosko</label><br>');
+               
+document.write('<li>' + pergunta[4] + '</li>');
+document.write('<input type="radio" id="maquina" name="r4" value="A Máquina de Lavar">');
+document.write('<label for="maquina">A Máquina de Lavar</label><br>');
+document.write('<input type="radio" id="aula" name="r4" value="A Aula de Inglês">');
+document.write('<label for="aula">A Aula de Inglês</label><br>');
+document.write('<input type="radio" id="acapulco" name="r4" value="Chaves Vamos Todos A Acapulco">');
+document.write('<label for="acapulco">Chaves Vamos Todos A Acapulco</label><br>');
+document.write('<input type="radio" id="nenhuma" name="r4" value="Nenhuma das respostas anteriores">');
+document.write('<label for="nenhuma">Nenhuma das respostas anteriores</label><br>');
+               
+document.write('<li>' + pergunta[5] + '</li>');
+document.write('<input type="radio" id="toni" name="r5" value="Toti Ramos">');
+document.write('<label for="toni">Toti Ramos</label><br>');
+document.write('<input type="radio" id="priscila" name="r5" value="Priscila Fantin">');
+document.write('<label for="priscila">Priscila Fantin</label><br>');
+document.write('<input type="radio" id="mariana" name="r5" value="Mariana Ximenes">');
+document.write('<label for="mariana">Mariana Ximenes</label><br>');
+document.write('<input type="radio" id="savala" name="r5" value="Elizabeth Savala">');
+document.write('<label for="savala">Elizabeth Savala</label><br>');
+               
+document.write('<li>' + pergunta[6] + '</li>');
+document.write('<input type="radio" id="formaamar" name="r6" value="Malhação Toda Forma de Amar">');
+document.write('<label for="formaamar">Malhação Toda Forma de Amar</label><br>');
+document.write('<input type="radio" id="sonhos" name="r6" value="Malhação Sonhos">');
+document.write('<label for="sonhos">Malhação Sonhos</label><br>');
+document.write('<input type="radio" id="diferenca" name="r6" value="Malhação: Viva a Diferença">');
+document.write('<label for="diferenca">Malhação: Viva a Diferença</label><br>');
+document.write('<input type="radio" id="intensa" name="r6" value="Malhação: Intensa como a vida">');
+document.write('<label for="intensa">Malhação: Intensa como a vida</label><br>');
+                   
+ 
+document.write('<li>' + pergunta[7] + '</li>');
+document.write('<input type="radio" id="nov2013" name="r7" value="20 de novembro de 2013">');
+document.write('<label for="nov2013">20 de novembro de 2013</label><br>');
+document.write('<input type="radio" id="dez2012" name="r7" value="10 de dezembro de 2012">');
+document.write('<label for="dez2012">10 de dezembro de 2012</label><br>');
+document.write('<input type="radio" id="out2012" name="r7" value="19 de outubro de 2012">');
+document.write('<label for="out2012">19 de outubro de 2012</label><br>');
+document.write('<input type="radio" id="out2010" name="r7" value="7 de outubro de 2010">');
+document.write('<label for="out2010">7 de outubro de 2010</label><br>');
+
+               
+document.write('<li>' + pergunta[8] + '</li>');
+document.write('<input type="radio" id="foggy" name="r8" value="Foggy Nelson">');
+document.write('<label for="foggy">Foggy Nelson</label><br>');
+document.write('<input type="radio" id="duascaras" name="r8" value="Duas Caras">');
+document.write('<label for="duascaras">Duas Caras</label><br>');
+document.write('<input type="radio" id="rei" name="r8" value="Rei do Crime">');
+document.write('<label for="rei">Rei do Crime</label><br>');
+document.write('<input type="radio" id="charada" name="r8" value="Charada">');
+document.write('<label for="charada">Charada</label><br>');
+               
+document.write('<li>' + pergunta[9] + '</li>');
+document.write('<input type="radio" id="invertido" name="r9" value="O Mundo Invertido">');
+document.write('<label for="invertido">O Mundo Invertido</label><br>');
+document.write('<input type="radio" id="normal" name="r9" value="O Mundo Normal">');
+document.write('<label for="normal">O Mundo Normal</label><br>');
+document.write('<input type="radio" id="nether" name="r9" value="Nether">');
+document.write('<label for="nether">Nether</label><br>');
+document.write('<input type="radio" id="hawkins" name="r9" value="Hawkins Lab">');
+document.write('<label for="hawkins">Hawkins Lab</label><br>');
+               
+document.write('<li>' + pergunta[10] + '</li>');
+document.write('<input type="radio" id="2010" name="r10" value="2010">');
+document.write('<label for="2010">2010</label><br>');
+document.write('<input type="radio" id="2012" name="r10" value="2012">');
+document.write('<label for="2012">2012</label><br>');
+document.write('<input type="radio" id="2014" name="r10" value="2014">');
+document.write('<label for="2014">2014</label><br>');
+document.write('<input type="radio" id="2016" name="r10" value="2016">');
+document.write('<label for="2016">2016</label><br>');
+               
+               
+               
+               
+
+               document.write('</ol> ');
+             
+                   document.write('<input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">');
+               document.write('<input type="reset" name="limpar" value="Limpar Respostas">');
+               document.write('</form> ');	
+               document.write('<br>');
+               
+               
+
+function respostas(){
+      
+      var acertos=0;
+    //         comando  formulário  r0 é o nome do campo   value é o que você escolheu
+    //estou recuperando as informações selecionadas e guardando nas variáves de resp0 até resp10
+    
+    
+    //         document é o comando javascript
+    //         formQuizz é o nome do formulário
+    //         r0 até r10 são o nome dos campos  radio de perguntas
+    
+      var resp0=document.formQuizz.r0.value;
+    var resp1=document.formQuizz.r1.value;
+    var resp2=document.formQuizz.r2.value;
+    var resp3=document.formQuizz.r3.value;
+    var resp4=document.formQuizz.r4.value;
+    var resp5=document.formQuizz.r5.value;
+    var resp6=document.formQuizz.r6.value;
+    var resp7=document.formQuizz.r7.value;
+    var resp8=document.formQuizz.r8.value;
+    var resp9=document.formQuizz.r9.value;
+    var resp10=document.formQuizz.r10.value;
+      var result="";
+    var resposta=[];// resposta é uma variável vetor
+     resposta[0] = "Berry Allen ";
+   resposta[1] = "2012";
+   resposta[2] = "9";
+   resposta[3] = "Patolino";
+   resposta[4] = "A Máquina de Lavar";
+   resposta[5] = "Mariana Ximenes";
+   resposta[6] = "Malhação Toda Forma de Amar";
+   resposta[7] = "19 de outubro de 2012";
+   resposta[8] = "Rei do Crime";
+   resposta[9] = "O Mundo Invertido";
+   resposta[10] = "2013";
+   
+   
+   
+   
+   /*if((resp0.length==0)  /&&(resp1==null)&&(resp2==null)&&(resp3==null)&&(resp4==null)&&(resp5==null)&&(resp6==null)&&(resp7==null)&&(resp8==null)&&(resp9==null)&&(resp10==null)&&(resp11==null))
+   { alert("Vazio"); result="ok"; } */ 
+      if ((resp0=="")&& (resp1=="")&& (resp2=="")&& (resp3=="")&& (resp4=="") && (resp5=="")&& (resp6=="")&& (resp7=="")&& (resp8=="")&& (resp9=="")&& (resp10=="")) result="no";
+   if(result!= "no")
+   {
+   if(resp0 == resposta[0]) acertos=acertos+1;//acertos++
+   if(resp1 == resposta[1]) acertos=acertos+1;
+   if(resp2 == resposta[2]) acertos=acertos+1;
+   if(resp3 == resposta[3]) acertos=acertos+1;
+   if(resp4 == resposta[4]) acertos=acertos+1;
+   if(resp5 == resposta[5]) acertos=acertos+1;
+   if(resp6 == resposta[6]) acertos=acertos+1;
+   if(resp7 == resposta[7]) acertos=acertos+1;
+   if(resp8 == resposta[8]) acertos=acertos+1;
+   if(resp9 == resposta[9]) acertos=acertos+1;
+     if(resp10 == resposta[10]) acertos=acertos+1;
+   
+ 
+   
+   
+    
+   porcentagem=(acertos/11)*100;
+   alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' % '); 
+   if(Math.round(porcentagem)<=31) alert ('Não foi bom, somente ' + Math.round(porcentagem)+ ' % ');
+   else  if (Math.round(porcentagem)<50) alert ('Tá na média, chegou a 50%, pois acertou somente ' + Math.round(porcentagem)+ ' % ');
+   else  if (Math.round(porcentagem)<=69) alert ('Um resultado bacana , entre 50% e 69%,pois acertou ' + Math.round(porcentagem)+ ' % ');
+   else  if (Math.round(porcentagem)<=79) alert ('Está ok , ficou entre 50% e 79%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+   else  if (Math.round(porcentagem)<=89) alert ('Está bom , ficou entre 80% e 89%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+   else  if (Math.round(porcentagem)<=95) alert ('Maravilhoso! Você ficou entre 90% e 95%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+   else  alert ('Incrivel, você sabe muito!!! pois acertou ' + Math.round(porcentagem)+ ' % ');
+     
+   
+   
+    
+   } else alert("Você não escolheu nada !!!")
+   
+   
+   
+     
+   
+   
+   
+
+                                           
+                                               }
+</script>
+    
+
+  <!-- Scripts necessários -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

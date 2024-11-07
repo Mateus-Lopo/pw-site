@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivinhador de Números</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+        background-image: url(images/Fundo6.gif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        height: 100vh;
+        margin: 0;   
+            
+    }
+    .title {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        font-size: 60px;
+        text-shadow: 2px 2px 4px rgb(21, 0, 248);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+        text-shadow: 0 0 10px #00f,   /* brilho perto */
+                         0 0 10px #00f,   /* brilho médio */
+                         0 0 70px #00f,   /* brilho distante */
+                         0 0 70px #00f,   /* mais brilho */
+                         0 0 60px #00f; 
+    }
+    .result {
+        
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    tr {
+      color: white;
+      background-color: rgb(0, 0, 93);
+    }
+    .pass{
+      color: white;
+    }
+    p{
+      color: white;
+    }
+    .passa{
+        color: white;
+        text-shadow: 0 0 10px #00f,   /* brilho perto */
+                         0 0 20px #00f,   /* brilho médio */
+                         0 0 30px #00f,   /* brilho distante */
+                         0 0 40px #00f,   /* mais brilho */
+                         0 0 50px #00f; 
+    }
+    .titulo2{
+        display: inline;
+        background-color: rgb(103, 51, 248);
+        color: white;
+        padding: 5px;
+        border: none;
+    }
+    ::-webkit-scrollbar{
+      width: 15px;
+      background-color: #0f1a2f;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: rgb(16, 16, 105);
+      border-radius: 30px;
+    }
+    .botao{
+        background-color: rgb(5, 5, 201);
+        border-radius: 10px;
+        border: none;
+        padding: 10px 25px;
+        color: white;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    .botao:hover{
+        font-size: 25px;
+        background-color: rgb(35, 145, 242);
+    }
+    
+    
+    
+
+  </style>
+</head>
+<body>
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark text-white">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/LogoPrincipal.png" alt="" width="200" height="57">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="imagens.html">Adivinha imagens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="numeros.html">Adivinha números</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tibet.html">Tibet</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="participantes.html">Participantes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    
+  <h1 class="title">Adivinha número</h1>
+    
+  <div class="container text-center mt-5">
+      <h1 class="passa">Jogo da Adivinhação - Escolha um número de 1 até 31</h1>
+      <marquee behavior="alternate"><h2 class="passa">Escolha abaixo se o seu número aparece na tabela.</h2></marquee>
+      
+      <!-- Tabela de Números com inputs -->
+      <div class="mt-4">
+          <h2 class="pass">Tabela 1</h2>
+          <table class="table table-bordered">
+              
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td>6</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>11</td>
+                      <td>13</td>
+                      <td>15</td>
+                  </tr>
+                  <tr>
+                      <td>17</td>
+                      <td>19</td>
+                      <td>21</td>
+                      <td>23</td>
+                  </tr>
+                  <tr>
+                      <td>25</td>
+                      <td>27</td>
+                      <td>29</td>
+                      <td>31</td>
+                  </tr>
+              </tbody>
+          </table>
+
+      <div class="mt-3">
+          <p><input type="radio" name="tabela1" value="Sim" class="radio"> Sim
+          <input type="radio" name="tabela1" value="Não" checked> Não</p>
+      </div>
+      <br />
+      <div class="mt-4">
+          <h2 class="pass">Tabela 2</h2>
+          <table class="table table-bordered">
+              
+              <tbody>
+                  <tr>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>6</td>
+                      <td>7</td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>14</td>
+                      <td>15</td>
+                  </tr>
+                  <tr>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>22</td>
+                      <td>23</td>
+                  </tr>
+                  <tr>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>30</td>
+                      <td>31</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="mt-3">
+        <p><input type="radio" name="tabela2" value="Sim"> Sim
+          <input type="radio" name="tabela2" value="Não" checked> Não</p>
+      </div>
+      <br />
+      <div class="mt-4">
+          <h2 class="pass">Tabela 3</h2>
+          <table class="table table-bordered">
+              
+              <tbody>
+                  <tr>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                  </tr>
+                  <tr>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                  </tr>
+                  <tr>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>31</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="mt-3">
+        <p><input type="radio" name="tabela3" value="Sim"> Sim
+          <input type="radio" name="tabela3" value="Não" checked> Não</p>
+      </div>
+      <br />
+      <div class="mt-4">
+          <h2 class="pass">Tabela 4</h2>
+          <table class="table table-bordered">
+              
+              <tbody>
+                  <tr>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                  </tr>
+                  <tr>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                  </tr>
+                  <tr>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                  </tr>
+                  <tr>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>31</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="mt-3">
+        <p><input type="radio" name="tabela4" value="Sim"> Sim
+          <input type="radio" name="tabela4" value="Não" checked> Não</p>
+      </div>
+      <br />
+      <div class="mt-4">
+          <h2 class="pass">Tabela 5</h2>
+          <table class="table table-bordered">
+              
+              <tbody>
+                  <tr>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                  </tr>
+                  <tr>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                  </tr>
+                  <tr>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>31</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="mt-3">
+        <p><input type="radio" name="tabela5" value="Sim"> Sim
+          <input type="radio" name="tabela5" value="Não" checked> Não</p>
+      </div>
+      <br />
+    <form name="formAdivinha" method="get" id="adivinhaForm" class="mt-4">
+        <input type="button" class="botao" name="verifica" value="Ver o Resultado" onclick="respostas()">
+    </form>
+    <br />
+    <br />
+  </div>
+
+  <script>
+    function respostas() {
+        const escolhas = [
+            document.querySelector('input[name="tabela1"]:checked').value,
+            document.querySelector('input[name="tabela2"]:checked').value,
+            document.querySelector('input[name="tabela3"]:checked').value,
+            document.querySelector('input[name="tabela4"]:checked').value,
+            document.querySelector('input[name="tabela5"]:checked').value,
+        ];
+
+        const numeros = [
+            [1, 3, 5, 6, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31], // Tabela 1
+            [2, 3, 6, 7, 10, 11, 14, 15, 18, 19, 22, 23, 26, 27, 30, 31], // Tabela 2
+            [4, 5, 6, 7, 12, 13, 14, 15, 20, 21, 22, 23, 28, 29, 30, 31], // Tabela 3
+            [8, 9, 10, 11, 12, 13, 14, 15, 24, 25, 26, 27, 28, 29, 30, 31], // Tabela 4
+            [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], // Tabela 5
+        ];
+
+        // Conjunto de possíveis números
+        let possiveisNumeros = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]);
+
+        for (let i = 0; i < escolhas.length; i++) {
+            if (escolhas[i] === "Sim") {
+                // Se "Sim", mantém apenas os números daquela tabela
+                const numerosTabela = new Set(numeros[i]);
+                possiveisNumeros = new Set([...possiveisNumeros].filter(num => numerosTabela.has(num)));
+            } else {
+                // Se "Não", remove os números daquela tabela
+                const numerosTabela = new Set(numeros[i]);
+                possiveisNumeros = new Set([...possiveisNumeros].filter(num => !numerosTabela.has(num)));
+            }
+        }
+
+        // Se sobrar apenas um número, mostra o resultado
+        if (possiveisNumeros.size === 1) {
+            const numeroPensado = [...possiveisNumeros][0];
+            document.body.innerHTML = `
+                <div class="result">
+                    <h2 class="titulo2">O número que você pensou <br><br>foi: ${numeroPensado}</h2>
+                    
+                    <br /><br />
+                    <br /><br /><a href=""><button class="botao"><h3>Tentar Novamente!!!</h3></button></a>
+                </div>
+            `;
+        } else {
+            alert('Você não escolheu nenhum número. Por favor, escolha um número.');
+        }
+    }
+  </script>
+
+  <!-- Scripts necessários -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

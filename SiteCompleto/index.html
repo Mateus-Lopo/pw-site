@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        background-image: url(images/Alternative.gif);
+        background-size: cover;
+        background-position: center;
+        
+        height: 100vh;
+        margin: 0;       
+    }
+    .title
+    {
+        text-align: center;
+        color: white;
+        margin: 20px;
+        font-size: 70px;
+        background: linear-gradient(to right, #0000e2, #7edbf5);
+        background-clip: text;
+        color: transparent;
+    }
+    .p1{
+        text-align: center;
+        color: white;
+        font-size: 25px;
+    }
+    
+
+    
+.slide{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+.pagina{
+    width: 200px; 
+    height: 500px; 
+    margin: 50px;
+    border-radius: 20px; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: width 0.5s;
+    
+}
+.pagina:hover{
+    width: 300px;
+    
+}
+
+a[href="quiz.html"] .pagina {
+    margin: 10px;
+    background-image: url('images/imagem1.jpg'); 
+}
+
+a[href="imagens.html"] .pagina {
+  margin: 10px;
+    background-image: url('images/imagem2.jpg'); 
+}
+
+a[href="numeros.html"] .pagina {
+  margin: 10px;
+    background-image: url('images/imagem3.jpg'); 
+}
+
+a[href="tibet.html"] .pagina {
+  margin: 10px;
+    background-image: url('images/imagem4.png'); 
+}
+    ::-webkit-scrollbar{
+      width: 15px;
+      background-color: #0f1a2f;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: rgb(42, 42, 73);
+      border-radius: 30px;
+    }
+    .p2{
+      color: white;
+    }
+    .indexText {
+    max-width: 700px; /* Limita a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    background-color: rgba(102, 78, 80, 0.5); /* Fundo transparente, se desejar */
+    border-radius: 8px; /* Arredonda os cantos, se desejar */
+}
+
+.p2 {
+  font-size: 20px;
+    color: white; /* Define a cor do texto */
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .indexText {
+        padding: 15px; /* Reduz o padding em telas menores */
+    }
+
+    .p2 {
+        font-size: 14px; /* Ajusta o tamanho da fonte em telas menores */
+    }
+    
+}
+h2{
+  color: white;
+}
+.div2{
+  max-width: 240px; /* Limita a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    background-color: rgba(102, 78, 80, 0.5); /* Fundo transparente, se desejar */
+    border-radius: 8px; /* Arredonda os cantos, se desejar */
+}
+
+    
+
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger text-white">
+    <a class="navbar-brand" href="#">
+        <img src="images/LogoPrincipal.png" alt="" width="200" height="57">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="imagens.html">Adivinha imagens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="numeros.html">Adivinha números</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tibet.html">Tibet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="participantes.html">Participantes</a>
+      </li>
+      </ul>
+      
+  </div>
+  </nav>
+    
+    <h1 class="title">Seriados e novelas</h1>
+    <p class="p1">Bem vindo ao nosso site de jogos sobre novelas e seriados!</p>
+    <br /><br />
+    <div class="indexText">
+      <p class="p2">
+          Este site é um projeto da aula de PW (Programação Web), onde <br>
+          utilizamos todos os nossos conhecimentos adquiridos durante o ano. <br>
+          Este site foi feito por Mateus Lopo em conjunto com Victor Hugo, <br>
+          e com o suporte dos professores Carlos Eduardo e Alex. <br>
+          O tema abordado aqui são seriados e novelas em geral.
+      </p>
+  </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 mb-4">
+          <a href="quiz.html">
+            <div class="pagina"></div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <a href="imagens.html">
+            <div class="pagina"></div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <a href="numeros.html">
+            <div class="pagina"></div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <a href="tibet.html">
+            <div class="pagina"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="div2">
+      <h2>Avalie nosso trabalho</h2>
+      <br>
+      <img src="images/Avaliacao.png" alt="Avaliação" title="Avalie" width="200px">
+    </div>
+    <br><br><br>
+  
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>
+</html>
